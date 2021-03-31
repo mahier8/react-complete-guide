@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import './App.css';
 import Person from './Person/Person';
 
@@ -80,12 +81,6 @@ class App extends Component {
          })}
       </div> 
       );
-
-      style.backgroundColor = "red";
-      style[":hover"] = {
-        backgroundColor: "salmon",
-        color: "black"
-      }
     }
 
     const classes = [];
@@ -104,9 +99,11 @@ class App extends Component {
         className={classes.join(" ")}
         >
         This is really working!</p>
-        <button 
-        style={style}
-        onClick={this.togglePersonsHandler}>Toggle persons</button>           
+        <button
+        className="button"
+        onClick={this.togglePersonsHandler}>
+        Toggle persons
+        </button>           
         {persons}
       </div>
 
